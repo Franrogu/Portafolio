@@ -3,17 +3,27 @@ body{
 }
 
 .main-nav{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
-    height: 20px;
+    height: 2rem;
     background-color: beige;
-    position: relative;
+   /* position: relative; */
     margin-bottom: 4em;
 
 }
 
-.main-nav > ul {
-    list-style: none;
+.main-nav > div {
+    justify-content: space-between;
+    align-content: flex-end;
+    padding-right: 1em;
 }
+
+.main-nav >div:hover{
+    background-color: rgb(154, 154, 182);
+}
+
 
 .quienSoy{
     margin-top: 1em;
