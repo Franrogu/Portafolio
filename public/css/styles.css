@@ -1,48 +1,153 @@
-body{
-    background-color:aliceblue;
+:root{
+    --colorfondo: #450e46;
+    --colorbordes:#cdbcc6;
+    --letraresaltada:  #d8ced8;
+    --letra: #ebe5eb;
+    --fondochat: #ffff;
+    
 }
-
-.main-nav{
-    position: fixed;
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorfondo);
+    font-style:inherit;
+}
+.container{
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 2rem;
-    background-color: beige;
-   /* position: relative; */
-    margin-bottom: 4em;
-
+    height: 100%;
+    flex-grow: 2;
 }
-
-.main-nav > div {
+nav{
+    display: flex;
+}
+.navegar{
+    display: flex;
+    height: 2%;
+    width: calc(23% - 1em);
     justify-content: space-between;
-    align-content: flex-end;
-    padding-right: 1em;
+    background-color: var(--colorfondo);    
 }
 
-.main-nav >div:hover{
-    background-color: rgb(154, 154, 182);
+.menu > img{
+    padding: 0 .3em;
+}
+.historial > span, img{
+    font-size: 1.2em;
+    margin: 0 .3rem;
+    color: var(--letra);
 }
 
 
-.quienSoy{
-    margin-top: 1em;
+.iconos-navegar{
+    width: 1em;
+    height: 1em;
+}
+.historial{
+    display: flex;
 }
 
-.meDedico{
-    margin-top: 1em;
+.buscador{
+    background-color: var(--colorfondo);
+    width: 40%;
+    height: auto;
+    border-radius: 4%;
+    border: solid .1em;
+    border-color: var(--colorbordes);
+    width: 30em;
+    
+}
+.buscar > span{
+    padding: 0 .3rem;
+    color: var(--letra);
 }
 
-.hobbies{
-    margin-top: 1em;
+.iconos-espacio-trabajo{
+    width: 2em;
+    height: 2em;
+    padding: 1em 0;
+}
+.espacios-trabajo{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-right: solid .1em;
+    border-color: var(--colorbordes);
+}
+.espacios-trabajo > span{
+    font-size: 1.5em;
+    color: var(--colorbordes);
+}
+.espaciotrabajo{
+    height: 2em;
 }
 
-.proyectos{
-    margin-top: 1em;
+
+.area-canales{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+}
+.area-canales > span{
+    padding: .5em .5em;
+    color: var(--letra);
 }
 
-footer{
-    width: 100%;
-    height: 10rem;
-    background-color: red;
+.espaciotrabajo{
+    padding: .5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.iconos-canales{
+    width: 1em;
+    height: 1em;
+}
+.canales{
+    display: flex;
+    flex-direction: column;
+}
+.canales >span{
+    padding: .5em ;
+    color: var(--letra);
+}
+
+
+
+.area-chat{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid .1em;
+    background-color: var(--fondochat);
+}
+.nombre-chat{
+    height: 2em;
+    padding: .5em;
+}
+
+.mensajechat{
+    display: flex;
+    align-items: flex-start;
+    margin: 2em 0;
+    padding-right: 2em;
+    
+}
+.mensajechat > img{
+    padding: 0 .2em 0 1em;
+}
+
+.texto-chat{
+    width: 95%;
+    height: 4em;
+    background-color: var(--colorbordes);
+    border: solid .05em;
+    border-radius: 2%;
+    align-self: center;
+    margin-bottom: 1em;
+    
 }
