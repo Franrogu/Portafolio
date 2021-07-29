@@ -6,24 +6,32 @@
     --fondochat: #ffff;
     
 }
-html, body{
+body{
     width: 100%;
     height: 100%;
     background-color: var(--colorfondo);
     font-style:inherit;
+    display: grid;
+    grid-template-areas:    "navegar"
+                            "container"
+
 }
+
 .container{
-    display: flex;
     height: 100%;
     flex-grow: 2;
+    display: grid; 
+    grid-template-areas: "espacios-trabajo area-canales area-chat";
+    
+    
 }
 nav{
-    display: flex;
+    display: grid;
+    grid-template-areas: "navegar buscador buscador buscador opciones";
 }
 .navegar{
     display: flex;
-    height: 2%;
-    width: calc(23% - 1em);
+    grid-area: navegar;
     justify-content: space-between;
     background-color: var(--colorfondo);    
 }
@@ -47,18 +55,24 @@ nav{
 }
 
 .buscador{
+    grid-area: buscador;
     background-color: var(--colorfondo);
-    width: 40%;
     height: auto;
-    border-radius: 4%;
-    border: solid .1em;
     border-color: var(--colorbordes);
     width: 30em;
     
 }
-.buscar > span{
+.buscar {
+    border: solid .2em var(--colorbordes);
+    border-radius: 3%;
     padding: 0 .3rem;
+    width: 100%;
     color: var(--letra);
+}
+.opciones{
+    grid-area: opciones;
+    color: var(--fondochat);
+
 }
 
 .iconos-espacio-trabajo{
@@ -68,6 +82,7 @@ nav{
 }
 .espacios-trabajo{
     display: flex;
+    grid-area: espacios-trabajo;
     height: 100%;
     flex-direction: column;
     align-items: center;
@@ -84,8 +99,8 @@ nav{
 
 
 .area-canales{
-    width: 23%;
     display: flex;
+    grid-area: area-canales;
     flex-direction: column;
     padding: 1em 0;
 }
@@ -120,6 +135,7 @@ nav{
     width: fit-content;
     height: 100%;
     display: flex;
+    grid-area: area-chat;
     flex-direction: column;
     justify-content: space-between;
     border: solid .1em;
