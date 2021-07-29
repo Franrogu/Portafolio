@@ -1,7 +1,6 @@
 @import 'grid';
 @import 'clases';
-@import 'media';
-  
+ 
   .uno{
     grid-column: 1/2;
     grid-row:1/2;
@@ -21,4 +20,4 @@
     grid-column: 3/4;
     grid-row:3/4;
   }
-$size: 400px;
+  @import 'media';
